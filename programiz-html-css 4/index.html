@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /*the CSS code for the dice roll*/
+#dicearea {
+  background-color: #88c9f2;
+  padding: 30px;
+  border-radius: 20px;
+}
+img{background-color: white; border-radius: 12px;}
+button{padding:20px; background-color: green;border-radius:5px;}
+button:hover{cursor:pointer;background-color:grey;}
+  </style>
+  <title>Dice Roll</title>
+</head>
+
+<body>
+  <h1>
+    Dice Roll
+  </h1> <!-- Closing h1 tag was missing here -->
+  <div id="dicearea">
+    <img src="images/1.png" height="100px" alt="coin" id="diceimage">
+    <br>
+    <button onclick="rolldice()">Roll</button>
+  </div>
+  <script>
+    //The JS code for the dice roll
+var diceimage = document.getElementById("diceimage");
+function createRandom(max) {
+    return Math.floor(Math.random() * max);
+}
+function roledice() {
+var randomnumber = createRandom(6);
+  if (randomnumber == 0) {
+    diceimage.src = "images/1.png";
+} else if (randomnumber == 1) {
+    diceimage.src = "images/2.png";
+} else if (randomnumber == 2) {
+    diceimage.src = "images/3.png";
+} else if (randomnumber == 3) {
+    diceimage.src = "images/4.png";
+} else if (randomnumber == 4) {
+    diceimage.src = "images/5.png";
+} else if (randomnumber == 5) {
+    diceimage.src = "images/6.png";
+}
+}
+      </script>
+</body>
+
+</html>
